@@ -23,18 +23,7 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - uses: actions/checkout@v2
-
-      # Runs a single command using the runners shell
-      - name: Run a one-line script
-        run: echo Hello, world!
-
-      # Runs a set of commands using the runners shell
-      - name: Run a multi-line script
-        run: |
-          echo Add other actions to build,
-          echo test, and deploy your project.
-          
+      - uses: actions/checkout@v2          
           
       - uses: game-ci/unity-builder@v2
         env:
@@ -42,14 +31,15 @@ jobs:
         with:
           targetPlatform: StandaloneWindows64
 
-          
-      - name: Unity - Builder
-        # You may pin to the exact commit or the version.
-        # uses: game-ci/unity-builder@c317d144c37b2004ae02490988ded7b934a182be
-        uses: game-ci/unity-builder@v2
+      - uses: actions/cache@v2
         with:
-          unityVersion: 2020.3.15f2
-          targetPlatform: StandaloneWindows64 
+          path: path/to/your/project/Library
+          key: Library-ZombieTiles-TargetPlatform
+          restore-keys: |
+            Library-ZombieTiles-
+            Library-
+
+          
         # Output 
       - uses: actions/upload-artifact@v2
         with:

@@ -1,5 +1,10 @@
 name: Acquire activation file
 on:
+  # Triggers the workflow on push or pull request events but only for the develop branch
+  push:
+    branches: [ newFort4-patch-2 ]
+  pull_request:
+    branches: [ newFort4-patch-2 ]
   workflow_dispatch: {}
 jobs:
   activation:

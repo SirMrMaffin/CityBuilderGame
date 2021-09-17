@@ -33,7 +33,7 @@ jobs:
 
       - uses: actions/cache@v2
         with:
-          path: path/to/your/project/Library
+          path: .
           key: Library-ZombieTiles-TargetPlatform
           restore-keys: |
             Library-ZombieTiles-
@@ -48,6 +48,6 @@ jobs:
 
       - name: Zip build
         run: |
-          pushd build/StandaloneWindows64
-          zip -r ../../StandaloneWindows64.zip .
+          pushd build/StandaloneOSX
+          zip -r ../../StandaloneOSX.zip .
           popd

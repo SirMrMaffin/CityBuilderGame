@@ -1,11 +1,14 @@
-﻿public enum RiverDirection
+﻿namespace ZombieTiles.Enums
 {
-    North,
-    South,
-    West,
-    East,
-    NorthWest,
-    NorthEast,
-    SouthWest,
-    SouthEast
+    public enum RiverDirection
+    {
+        North,
+        South,
+        West,
+        East,
+        NorthWest,
+        NorthEast,
+        SouthWest,
+        SouthEast
+    }
 }

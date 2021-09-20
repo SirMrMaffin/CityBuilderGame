@@ -1,0 +1,35 @@
+name: Build Unity Project
+
+on: [push, pull_request]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2          
+          
+      - uses: game-ci/unity-builder@v2
+        env:
+          UNITY_LICENSE: ${{ secrets.UNITY_LICENSE }}
+        with:
+          targetPlatform: StandaloneOSX
+
+      - uses: actions/cache@v2
+        with:
+          path: .
+          key: Library-ZombieTiles-TargetPlatform
+          restore-keys: |
+            Library-ZombieTiles-
+            Library-
+
+      - uses: actions/upload-artifact@v2
+        with:
+          name: Build
+          path: build
+
+      - name: Zip build
+        run: |
+          pushd build/StandaloneOSX
+          zip -r ../../StandaloneOSX.zip .
+          popd

@@ -334,6 +334,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1507164864}
   - component: {fileID: 1507164863}
+  - component: {fileID: 1507164865}
   m_Layer: 0
   m_Name: Manager
   m_TagString: Untagged
@@ -353,7 +354,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c9557b712c1f458e80b46c6168f4c19, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  worldSize: 150
+  worldSize: 32
   tilemap: {fileID: 216028377}
   ground: {fileID: 3073039780164725394, guid: 0cbb35911a3e34f228b11ddbb34d177a, type: 3}
   water: {fileID: 2554841298931352191, guid: 4f11070ea7b5c41c08bdf91ca36e4384, type: 3}
@@ -371,6 +372,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1507164865
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1507164862}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5936ea747cdcc4e8686b7e70f4b03a28, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buildings:
+  - {fileID: 7375706478907620421, guid: 62798c158fa9241dab5ecb3d7b2cebca, type: 3}
+  - {fileID: 2486259479608258222, guid: 2956cd4d91e4f424c9a05404b7ff3636, type: 3}
+  - {fileID: -6495046623637411602, guid: 8833952f7afe7431bba13b7bcf18c967, type: 3}
 --- !u!1 &1589601211
 GameObject:
   m_ObjectHideFlags: 0

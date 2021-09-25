@@ -3,7 +3,8 @@ name: Build Unity Project
 on: [push, pull_request]
 
 jobs:
-  "osX build":
+  macOsBuild:
+    name: "MacOs build"
     runs-on: ubuntu-latest
 
     steps:
@@ -33,7 +34,8 @@ jobs:
           pushd build/StandaloneOSX
           zip -r ../../StandaloneOSX.zip .
           popd
-  "Windows build":
+  WindowsBuild:
+    name: "Windows build"
     runs-on: ubuntu-latest
 
     steps:

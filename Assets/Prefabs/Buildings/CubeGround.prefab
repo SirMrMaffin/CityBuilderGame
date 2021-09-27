@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 7412206176576674829}
   - component: {fileID: 7764466376877077157}
   - component: {fileID: 2700252255312045768}
+  - component: {fileID: 2440402186844046661}
   m_Layer: 0
   m_Name: CubeGround
   m_TagString: Untagged
@@ -95,3 +96,16 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &2440402186844046661
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3073039780164725394}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c3d074e9d88d42e2bea9bd7ede87698, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hoverMaterial: {fileID: 2100000, guid: 89c156d8533984a68a03ae8d6d449d9b, type: 2}

@@ -3,6 +3,7 @@ using UnityEngine.Assertions;
 
 namespace ZombieTiles.Mechanics.Building
 {
+    [RequireComponent(typeof(BoxCollider))]
     [RequireComponent(typeof(MeshRenderer))]
     public class BuildBase : MonoBehaviour
     {
@@ -13,7 +14,11 @@ namespace ZombieTiles.Mechanics.Building
         [SerializeField]
         private Material hoverMaterial;
 
-        private void OnMouseEnter() => meshRenderer.material = hoverMaterial;
+        private void OnMouseEnter()
+        {
+            Debug.Log("OnMouseEnter");
+            meshRenderer.material = hoverMaterial;
+        }
 
         private void OnMouseExit() => meshRenderer.material = originalMaterial;
 
@@ -28,7 +33,7 @@ namespace ZombieTiles.Mechanics.Building
 
             Assert.IsNotNull(builder);
 
-            meshRenderer = GetComponent<MeshRenderer>();
+            meshRenderer = transform.GetChild(0).GetComponent<MeshRenderer>();
             originalMaterial = meshRenderer.material;
         }
 

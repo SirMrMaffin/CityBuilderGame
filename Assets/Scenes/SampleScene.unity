@@ -355,6 +355,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   worldSize: 32
+  sandGenerationProbability: 18
   tilemap: {fileID: 216028377}
   ground: {fileID: 2407859954713491865, guid: 189eed37cb28d4eacbc642d0dc66cf26, type: 3}
   sand: {fileID: 3670583483456266645, guid: 1da356435fba64df1870a924ebceb149, type: 3}

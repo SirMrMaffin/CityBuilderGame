@@ -29,15 +29,23 @@ Preset:
     value: 32
     objectReference: {fileID: 0}
   - target: {fileID: 0}
+    propertyPath: sandGenerationProbability
+    value: 18
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
     propertyPath: tilemap
     value: 
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: ground
     value: 
-    objectReference: {fileID: 3073039780164725394, guid: 0cbb35911a3e34f228b11ddbb34d177a, type: 3}
+    objectReference: {fileID: 2407859954713491865, guid: 189eed37cb28d4eacbc642d0dc66cf26, type: 3}
+  - target: {fileID: 0}
+    propertyPath: sand
+    value: 
+    objectReference: {fileID: 3670583483456266645, guid: 1da356435fba64df1870a924ebceb149, type: 3}
   - target: {fileID: 0}
     propertyPath: water
     value: 
-    objectReference: {fileID: 2554841298931352191, guid: 4f11070ea7b5c41c08bdf91ca36e4384, type: 3}
+    objectReference: {fileID: 9033934370012176757, guid: bca104a75bdb3464cab331bc4a34a3a0, type: 3}
   m_ExcludedProperties: []
